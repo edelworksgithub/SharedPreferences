@@ -15,6 +15,10 @@ Android
 #####$> cd project-path
 #####$> cordova plugin add https://github.com/edelworksgithub/SharedPreferences.git
 
+###Uninstallation
+#####$> cd project-path
+#####$> cordova plugin remove in.edelworks.sharedpreferences
+
 ###Reference for Shared Preferences in Android
 [Android Developer - Saving Key-Value Sets](http://developer.android.com/training/basics/data-storage/shared-preferences.html)
 
