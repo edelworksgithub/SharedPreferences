@@ -18,11 +18,11 @@ Android
 ###How to
 #####Initialize shared Preference file
 
-function createPref(filename, mode){;
+   function createPref(filename, mode){
 
 	sharedpreferences.getSharedPreferences(filename, mode, successHandler, errorHandler);
 	
-};
+   }
 
 function successHandler(result){
 	alert("SUCCESS: \r\n"+result );
