@@ -28,8 +28,6 @@ public class Sharedpreferences extends CordovaPlugin {
 				case "MODE_APPEND":
 					try{
 						SharedPref = context.getSharedPreferences(PREF_FILE, Context.MODE_APPEND);
-						callbackContext.success("Shared Preferences Created with " + modeType);
-						return true;
 					}catch(Exception e){
 						callbackContext.error("Error creating Shared Preferences" + e.getMessage());
 						return false;
@@ -38,14 +36,14 @@ public class Sharedpreferences extends CordovaPlugin {
 				case "MODE_PRIVATE":
 					try{
 						SharedPref = context.getSharedPreferences(PREF_FILE, Context.MODE_PRIVATE);
-						callbackContext.success("Shared Preferences Created with " + modeType);
-						return true;
 					}catch(Exception e){
 						callbackContext.error("Error creating Shared Preferences" + e.getMessage());
 						return false;
 					}
 					break;
 				}
+				callbackContext.success("Shared Preferences Created with " + modeType);
+				return true;
 			}
 			callbackContext.error("Invalid Mode provided");
 			return false;
