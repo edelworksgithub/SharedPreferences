@@ -16,10 +16,9 @@
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="SharedPreferences" >
-                <param name="android-package" value="in.edelworks.sharedpreferences.SharedPreferences"/>
+                <param name="android-package" value="in.edelworks.sharedpreferences.Sharedpreferences"/>
             </feature>
         </config-file>
-        <source-file src="src/android/SharedPreferences.java" target-dir="src/in/edelworks/sharedpreferences" />
+        <source-file src="src/android/Sharedpreferences.java" target-dir="src/in/edelworks/sharedpreferences" />
     </platform>
-
 </plugin>
