@@ -15,7 +15,7 @@
     <!-- android -->
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
-            <feature name="SharedPreferences" >
+            <feature name="Sharedpreferences" >
                 <param name="android-package" value="in.edelworks.sharedpreferences.Sharedpreferences"/>
             </feature>
         </config-file>
