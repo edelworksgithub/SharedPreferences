@@ -19,7 +19,8 @@ Android
 #####Initialize shared Preference file
 
 ###### sharedpreferences.getSharedPreferences(filename, mode, successHandler, errorHandler);
-
+###### filename - SharedPrefernces File Name
+###### mode - mode of Preference file two accepted (MODE_APPEND, MODE_PRIVATE)
 
 
 ###Examples
