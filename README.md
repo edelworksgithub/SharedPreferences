@@ -18,12 +18,11 @@ Android
 ###How to
 #####Initialize shared Preference file
 
-
-   function createPref(filename, mode){
+function createPref(filename, mode){
 
 	sharedpreferences.getSharedPreferences(filename, mode, successHandler, errorHandler);
 	
-   }
+}
    
 
 function successHandler(result){
@@ -36,4 +35,25 @@ function errorHandler(result){
 
 	alert("ERORR: \r\n"+result );
 	
+}
+
+#####Put Values
+
+function putValue(key, value, type){
+
+	switch(type){
+		case "string":
+		sharedpreferences.putString(key, value, successHandler, errorHandler);
+		break;
+		case "int":
+		sharedpreferences.putInt(key, value, successHandler, errorHandler);
+		break;
+		case "long":
+		sharedpreferences.putLong(key, value, successHandler, errorHandler);
+		break;
+		case "boolean":
+		sharedpreferences.putBoolean(key, value, successHandler, errorHandler);
+		break;
+	}
+
 }
