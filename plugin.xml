@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="in.edelworks.sharedpreferences"
+    version="0.1.0">
+    <name>Shared Preferences</name>
+    <description>Shared Preferences</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova,Android Shared Preferences</keywords>
+    
+    <js-module src="www/sharedpreferences.js" name="SharedPreferences">
+        <clobbers target="sharedpreferences" />
+    </js-module>
+    
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="SharedPreferences" >
+                <param name="android-package" value="in.edelworks.sharedpreferences.SharedPreferences"/>
+            </feature>
+        </config-file>
+        <source-file src="src/android/SharedPreferences.java" target-dir="src/in/edelworks/sharedpreferences" />
+    </platform>
+
+</plugin>
