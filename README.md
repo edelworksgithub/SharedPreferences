@@ -40,7 +40,6 @@ function errorHandler(result){
 #####Put Values
 
 function putValue(key, value, type){
-
 	switch(type){
 		case "string":
 		sharedpreferences.putString(key, value, successHandler, errorHandler);
@@ -55,5 +54,4 @@ function putValue(key, value, type){
 		sharedpreferences.putBoolean(key, value, successHandler, errorHandler);
 		break;
 	}
-
 }
