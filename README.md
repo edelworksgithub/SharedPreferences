@@ -3,7 +3,7 @@ SharedPreferences
 
 Cordova Plugin for Android SharedPreferences
 
-# in.edelworks.sharedpreferences
+Package ID in.edelworks.sharedpreferences
 
-# Author: R. Pramod Nair
-# Organization: EdelWorks [edelworks.in]
+Author: R. Pramod Nair
+Organization: EdelWorks [edelworks.in]
