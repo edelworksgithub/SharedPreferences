@@ -25,9 +25,13 @@ Android
    }
 
 function successHandler(result){
+
 	alert("SUCCESS: \r\n"+result );
+	
 }
 
 function errorHandler(result){
+
 	alert("ERORR: \r\n"+result );
+	
 }
