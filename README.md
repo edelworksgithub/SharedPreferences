@@ -15,16 +15,43 @@ Android
 #####$> cd project-path
 #####$> cordova plugin add https://github.com/edelworksgithub/SharedPreferences.git
 
+###Reference for Shared Preferences in Android
+[Android Developer - Saving Key-Value Sets](http://developer.android.com/training/basics/data-storage/shared-preferences.html)
+
 ###How to
 #####Initialize shared Preference file
 
 ###### sharedpreferences.getSharedPreferences(filename, mode, successHandler, errorHandler);
 filename - SharedPrefernces File Name
 
-mode - mode of Preference file two accepted (MODE_APPEND, MODE_PRIVATE)
+mode - mode of Preference file. two accepted (MODE_APPEND, MODE_PRIVATE)
 
 
+#####Save String value into Preference file
 ###### sharedpreferences.putString(key, value, successHandler, errorHandler);
+
+#####Save Integer value into Preference file
+###### sharedpreferences.putInt(key, value, successHandler, errorHandler);
+
+#####Save Long value into Preference file
+###### sharedpreferences.putLong(key, value, successHandler, errorHandler);
+
+#####Save Boolean value into Preference file
+###### sharedpreferences.putBoolean(key, value, successHandler, errorHandler);
+
+#####Get String value from Preference file
+###### sharedpreferences.getString(key, value, successHandler, errorHandler);
+
+#####Get Integer value from Preference file
+###### sharedpreferences.getInt(key, value, successHandler, errorHandler);
+
+#####Get Long value from Preference file
+###### sharedpreferences.getLong(key, value, successHandler, errorHandler);
+######NOTE: returned value will be in String type. Please use eval() or parseInt() for calculation use
+
+#####Get Boolean value from Preference file
+###### sharedpreferences.getBoolean(key, value, successHandler, errorHandler);
+######NOTE: returned value will be 0 - for false and 1 - true
 
 
 ###Examples
