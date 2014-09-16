@@ -39,23 +39,20 @@ public class Sharedpreferences extends CordovaPlugin {
 			String modeType = args.getString(1);
 			Context context = cordova.getActivity();
 			if(in_array(MODE_ARRAY, modeType)){
-				switch(modeType){
-				case "MODE_APPEND":
+				if(modeType.equals("MODE_APPEND")){
 					try{
 						SharedPref = context.getSharedPreferences(PREF_FILE, Context.MODE_APPEND);
 					}catch(Exception e){
 						callbackContext.error("Error creating Shared Preferences" + e.getMessage());
 						return false;
 					}
-					break;
-				case "MODE_PRIVATE":
+				}else if(modeType.equals("MODE_PRIVATE")){
 					try{
-						SharedPref = context.getSharedPreferences(PREF_FILE, Context.MODE_PRIVATE);
+						SharedPref = context.getSharedPreferences(PREF_FILE, Context.MODE_APPEND);
 					}catch(Exception e){
 						callbackContext.error("Error creating Shared Preferences" + e.getMessage());
 						return false;
 					}
-					break;
 				}
 				callbackContext.success("Shared Preferences Created");
 				return true;
