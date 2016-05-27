@@ -57,6 +57,14 @@ mode - mode of Preference file. two accepted (MODE_APPEND, MODE_PRIVATE)
 ###### sharedpreferences.getBoolean(key, value, successHandler, errorHandler);
 ######NOTE: returned value will be 0 - for false and 1 - true
 
+###Newly Added (Thanks to @octera)
+
+#####Save Float value into Preference file
+###### sharedpreferences.putFloat(key, value, successHandler, errorHandler);
+
+#####Get Float value from Preference file
+###### sharedpreferences.getFloat(key, value, successHandler, errorHandler);
+
 
 ###Examples
 #####Initialize shared Preference file
