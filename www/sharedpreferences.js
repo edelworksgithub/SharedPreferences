@@ -29,6 +29,12 @@ var sharedpreferences = {
 	getLong: function(key, successCallback, errorCallback){
 		cordova.exec(successCallback, errorCallback, 'Sharedpreferences', 'getLong', [key])
 	},
+  putFloat:function(key, value, successCallback, errorCallback){
+    cordova.exec(successCallback, errorCallback, 'Sharedpreferences', 'putFloat', [key, value])
+  },
+  getFloat: function(key, successCallback, errorCallback){
+    cordova.exec(successCallback, errorCallback, 'Sharedpreferences', 'getFloat', [key])
+  },
 	remove: function(key, successCallback, errorCallback){
 		cordova.exec(successCallback, errorCallback, 'Sharedpreferences', 'remove', [key])
 	},

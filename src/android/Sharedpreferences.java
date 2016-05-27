@@ -170,6 +170,32 @@ public class Sharedpreferences extends CordovaPlugin {
 				callbackContext.error("Could Not Retreive " + args.getString(0) + e.getMessage());
 				return false;
 			}
+    }else if(PUT_FLOAT.equals(action)){
+      editor = SharedPref.edit();
+      try{
+        editor.putFloat(args.getString(0), args.getLong(1));
+        editor.commit();
+      }catch (Exception e){
+        callbackContext.error("Error editing Key " + args.getString(0) + " with value " + args.getLong(1) + e.getMessage());
+        return false;
+      }
+      callbackContext.success("Added Value " + args.getLong(1) + " to Preferences key " + args.getString(0));
+      return true;    
+    }else if(GET_FLOAT.equals(action)){                  
+      Float KeyVal;
+      try{        
+        if(SharedPref.contains(args.getString(0))){
+          KeyVal = SharedPref.getFloat(args.getString(0), 0);
+          callbackContext.success(KeyVal.toString());
+          return true;
+        }else{
+          callbackContext.error("No data");
+          return false;
+        }
+      }catch (Exception e){
+        callbackContext.error("Could Not Retreive " + args.getString(0) + e.getMessage());
+        return false;
+      }
 		}else if(REMOVE.equals(action)){
 			editor = SharedPref.edit();
 			try{
