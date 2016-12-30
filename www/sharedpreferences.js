@@ -5,6 +5,9 @@ var sharedpreferences = {
 	getSharedPreferences : function(file, mode, successCallback, errorCallback){
 		cordova.exec(successCallback, errorCallback, 'Sharedpreferences', 'getSharedPreferences', [file, mode])
 	},
+	getDefaultSharedPreferences: function( mode, successCallback, errorCallback ) {
+		cordova.exec(successCallback, errorCallback, 'Sharedpreferences', 'getDefaultSharedPreferences', [mode])
+	}
 	putString: function(key, string, successCallback, errorCallback){
 		cordova.exec(successCallback, errorCallback, 'Sharedpreferences', 'putString', [key, string])
 	},
