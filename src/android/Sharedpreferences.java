@@ -63,7 +63,7 @@ public class Sharedpreferences extends CordovaPlugin {
 			}
 		//Put a Sting into the Shared Preferences File
 		//params key and value String type
-		}else if(getDefaultSharedPreferences.equals(action)){
+		}else if(GET_DEFAULT_SHARED_PREFERENCES.equals(action)){
 			String modeType = args.getString(0);
 			Context context = cordova.getActivity();
 			if(in_array(MODE_ARRAY, modeType)){
