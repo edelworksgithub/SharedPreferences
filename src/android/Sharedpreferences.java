@@ -9,6 +9,8 @@ import org.json.JSONException;
 import android.content.Context;
 import android.content.SharedPreferences;
 
+import android.preference.PreferenceManager;
+
 public class Sharedpreferences extends CordovaPlugin {
 	public static final String GET_DEFAULT_SHARED_PREFERENCES = "getDefaultSharedPreferences";
 	public static final String GET_SHARED_PREFERENCES = "getSharedPreferences";
@@ -69,14 +71,14 @@ public class Sharedpreferences extends CordovaPlugin {
 			if(in_array(MODE_ARRAY, modeType)){
 				if(modeType.equals("MODE_APPEND")){
 					try{
-						SharedPref = context.getDefaultSharedPreferences(Context.MODE_APPEND);
+						SharedPref = PreferenceManager.getDefaultSharedPreferences(Context.MODE_APPEND);
 					}catch(Exception e){
 						callbackContext.error("Error creating Default Shared Preferences" + e.getMessage());
 						return false;
 					}
 				}else if(modeType.equals("MODE_PRIVATE")){
 					try{
-						SharedPref = context.getDefaultSharedPreferences(Context.MODE_APPEND);
+						SharedPref = PreferenceManager.getDefaultSharedPreferences(Context.MODE_APPEND);
 					}catch(Exception e){
 						callbackContext.error("Error creating Default Shared Preferences" + e.getMessage());
 						return false;
