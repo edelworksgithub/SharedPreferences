@@ -10,6 +10,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 
 public class Sharedpreferences extends CordovaPlugin {
+	public static final String GET_DEFAULT_SHARED_PREFERENCES = "getDefaultSharedPreferences";
 	public static final String GET_SHARED_PREFERENCES = "getSharedPreferences";
 	public static final String PUT_STRING = "putString";
 	public static final String GET_STRING = "getString";
@@ -62,6 +63,31 @@ public class Sharedpreferences extends CordovaPlugin {
 			}
 		//Put a Sting into the Shared Preferences File
 		//params key and value String type
+		}else if(getDefaultSharedPreferences.equals(action)){
+			String modeType = args.getString(0);
+			Context context = cordova.getActivity();
+			if(in_array(MODE_ARRAY, modeType)){
+				if(modeType.equals("MODE_APPEND")){
+					try{
+						SharedPref = context.getDefaultSharedPreferences(Context.MODE_APPEND);
+					}catch(Exception e){
+						callbackContext.error("Error creating Default Shared Preferences" + e.getMessage());
+						return false;
+					}
+				}else if(modeType.equals("MODE_PRIVATE")){
+					try{
+						SharedPref = context.getDefaultSharedPreferences(Context.MODE_APPEND);
+					}catch(Exception e){
+						callbackContext.error("Error creating Default Shared Preferences" + e.getMessage());
+						return false;
+					}
+				}
+				callbackContext.success("Default Shared Preferences Created");
+				return true;
+			}else{
+				callbackContext.error("Invalid Mode provided");
+				return false;
+			}
 		}else if(PUT_STRING.equals(action)){
 			editor = SharedPref.edit();
 			try{
