@@ -67,7 +67,7 @@ public class Sharedpreferences extends CordovaPlugin {
 		//params key and value String type
 		}else if(GET_DEFAULT_SHARED_PREFERENCES.equals(action)){
 			try{
-				SharedPref = PreferenceManager.getDefaultSharedPreferences(getActivity().getBaseContext());
+				SharedPref = PreferenceManager.getDefaultSharedPreferences(cordova.getActivity().getBaseContext());
 			}catch(Exception e){
 				callbackContext.error("Error creating Default Shared Preferences" + e.getMessage());
 				return false;
