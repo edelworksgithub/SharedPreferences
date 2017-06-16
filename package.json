@@ -1,0 +1,27 @@
+{
+  "name": "SharedPreferences",
+  "version": "0.1.0",
+  "description": "Shared Preferences",
+  "cordova": {
+    "id": "in.edelworks.sharedpreferences",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kaclark28/SharedPreferences.git"
+  },
+  "keywords": [
+    "cordova",
+    "Android Shared Preferences",
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": "edelworksgithub",
+  "license": "Apache 2.0",
+  "bugs": {
+    "url": "https://github.com/kaclark28/SharedPreferences/issues"
+  },
+  "homepage": "https://github.com/kaclark28/SharedPreferences#readme"
+}
